@@ -18,9 +18,9 @@ function usePageVisiblity(onHidden, onVisible) {
   useEffect(() => {
     if (!handleVisibilityChange.current) {
       handleVisibilityChange.current = function () {
-        if (isPageHidden()) onHidden && onHidden();
+        if (isPageHidden()) onHidden instanceof Function && onHidden();
 
-        if (isPageVisible()) onVisible && onVisible();
+        if (isPageVisible()) onVisible instanceof Function && onVisible();
       };
     }
 
