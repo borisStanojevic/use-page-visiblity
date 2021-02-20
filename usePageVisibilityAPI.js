@@ -12,7 +12,7 @@ const isPageHidden = () => document.visibilityState === "hidden";
 
 const isPageVisible = () => document.visibilityState === "visible";
 
-function usePageVisiblityAPI(onHidden, onVisible) {
+function usePageVisiblity(onHidden, onVisible) {
   const handleVisibilityChange = useRef(null);
 
   useEffect(() => {
@@ -32,4 +32,4 @@ function usePageVisiblityAPI(onHidden, onVisible) {
   }, []);
 }
 
-export default usePageVisiblityAPI;
+export default usePageVisiblity;
