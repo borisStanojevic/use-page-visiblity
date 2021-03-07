@@ -2,11 +2,13 @@ import {useRef, useEffect} from "react";
 
 const VISIBILITY_CHANGE = "visibilitychange";
 
-const subscribeToVisibilityChange = (callback) =>
+const subscribeToVisibilityChange = (callback) => {
   document.addEventListener(VISIBILITY_CHANGE, callback);
+}
 
-const unsubscribeFromVisibilityChange = (callback) =>
+const unsubscribeFromVisibilityChange = (callback) => {
   document.removeEventListener(callback, VISIBILITY_CHANGE);
+}
 
 const isPageHidden = () => document.visibilityState === "hidden";
 
